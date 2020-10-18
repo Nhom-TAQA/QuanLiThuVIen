@@ -26,6 +26,7 @@ namespace QL_TV
         {
             listDS = ql.DauSaches.ToList();
             dsDS = new DS_DauSach(listDS);
+            dsDS.dtgvViewDL.CellClick += dtgvViewDL_CellClick;
             panelShowKQ.Controls.Clear();
             panelShowKQ.Controls.Add(dsDS);
         }
@@ -76,6 +77,36 @@ namespace QL_TV
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
             LayDL();
+        }
+        private string ma;
+        private void dtgvViewDL_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            ma = dsDS.dtgvViewDL.Rows[e.RowIndex].Cells["Ma_DauSach"].Value.ToString();
+            dsDS = new DS_DauSach(listDS);
+            ctDS = new CT_DauSach(dsDS.dtgvViewDL.Rows[e.RowIndex].Cells["Ma_DauSach"].Value.ToString());
+            ctDS.btnQuayLai.Click += btnQuayLai_Click;
+            ctDS.btnXoa.Click += btnXoa_Click;
+            panelShowKQ.Controls.Clear();
+            panelShowKQ.Controls.Add(ctDS);
+
+        }
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            ctDS = new CT_DauSach(ma);
+            DAL_DauSach dal = new DAL_DauSach();
+            DauSach ds1 = ql.DauSaches.FirstOrDefault(n => n.Ma_DauSach == ctDS.txbMaDauSach.Text);
+            bool rs = dal.Delete(ctDS.txbMaDauSach.Text);
+            if (rs == true)
+            {
+                MessageBox.Show("Xóa thành công", "Thông báo");
+                panelShowKQ.Controls.Clear();
+                listDS.Remove(ds1);
+                panelShowKQ.Controls.Add(new DS_DauSach(listDS));
+            }
+            else
+            {
+                MessageBox.Show("Xóa không thành công", "Thông báo");
+            }
         }
     }
 }
