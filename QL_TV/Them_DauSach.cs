@@ -47,28 +47,32 @@ namespace QL_TV
             ma_moi1 += ma_moi;
             return ma_moi1;
         }
+        //private string TaoMaSach()
+        //{
+        //    listS = ql.Saches.ToList();
+        //    int newest = 0;
+        //    foreach (Sach s in listS)
+        //    {
+        //        int ma = Int32.Parse(s.Ma_Sach.Substring(6));
+        //        if (ma > newest)
+        //        {
+        //            newest = ma;
+        //        }
+        //    }
+
+        //    string ma_moi = (newest + 1).ToString();
+        //    string ma_moi1 = "S";
+        //    int x = 7 - ma_moi.Length - 2;
+        //    for (int i = 0; i < x; i++)
+        //    {
+        //        ma_moi1 += "0";
+        //    }
+        //    ma_moi1 += ma_moi;
+        //    return ma_moi1;
+        //}
         private string TaoMaSach()
         {
-            listS = ql.Saches.ToList();
-            int newest = 0;
-            foreach (Sach s in listS)
-            {
-                int ma = Int32.Parse(s.Ma_Sach.Substring(6));
-                if (ma > newest)
-                {
-                    newest = ma;
-                }
-            }
 
-            string ma_moi = (newest + 1).ToString();
-            string ma_moi1 = "S";
-            int x = 7 - ma_moi.Length - 2;
-            for (int i = 0; i < x; i++)
-            {
-                ma_moi1 += "0";
-            }
-            ma_moi1 += ma_moi;
-            return ma_moi1;
         }
 
         private void btnThem_Click(object sender, EventArgs e)
