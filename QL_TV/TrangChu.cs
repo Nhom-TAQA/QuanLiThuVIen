@@ -37,23 +37,17 @@ namespace QL_TV
           }
 
 <<<<<<< HEAD
-<<<<<<< HEAD
         private void btnQuanLy_Click(object sender, EventArgs e)
         {
             panelControl.Controls.Clear();
             panelControl.Controls.Add(new QuanLy(nv.Ma_NhanVien));
         }
 =======
-=======
->>>>>>> parent of fe9ebb6... Hoang Anh
           private void btnQuanLy_Click(object sender, EventArgs e)
           {
                panelControl.Controls.Clear();
                panelControl.Controls.Add(new QuanLy());
           }
-<<<<<<< HEAD
->>>>>>> parent of fe9ebb6... Hoang Anh
-=======
 >>>>>>> parent of fe9ebb6... Hoang Anh
 
           private void btnLogOut_Click(object sender, EventArgs e)
