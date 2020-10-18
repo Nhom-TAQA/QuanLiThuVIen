@@ -113,19 +113,7 @@ namespace QL_TV
                     filename = open.FileName.ToString();
                 }
             }));
-            thr.SetApartmentState(ApartmentState.STA);
-            thr.Start();
-            thr.Join();
-
-            if (filename == "")
-            {
-                return;
-            }
-
-            byte[] arrByte = HinhAnh.StringToByte(filename);
-            ArrByte_Anh = arrByte;
-
-            ptbAnhDauSach.Image = HinhAnh.ByteToImage(arrByte);
+           
         }
     }
 }
