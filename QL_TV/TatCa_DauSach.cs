@@ -14,9 +14,22 @@ namespace QL_TV
 {
      public partial class TatCa_DauSach : UserControl
      {
+        QLTV ql = new QLTV();
+        List<DauSach> listDS = new List<DauSach>();
+        DS_DauSach dsDS;
+        CT_DauSach ctDS;
         public TatCa_DauSach()
         {
             InitializeComponent();
+            LayDL();
         }
-     }
+        void LayDL()
+        {
+            listDS = ql.DauSaches.ToList();
+            dsDS = new DS_DauSach(listDS);
+            panelData.Controls.Clear();
+            panelData.Controls.Add(dsDS);
+        }     
+        
+    }
 }
