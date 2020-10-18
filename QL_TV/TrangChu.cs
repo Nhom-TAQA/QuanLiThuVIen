@@ -44,7 +44,7 @@ namespace QL_TV
         private void btnQuanLy_Click(object sender, EventArgs e)
         {
             panelControl.Controls.Clear();
-            panelControl.Controls.Add(new QuanLy());
+            panelControl.Controls.Add(new QuanLy(nv.Ma_NhanVien));
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)
