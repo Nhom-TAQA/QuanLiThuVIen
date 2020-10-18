@@ -121,6 +121,7 @@
     <Compile Include="Entity\sysdiagram.cs" />
     <Compile Include="Entity\TaiKhoan.cs" />
     <Compile Include="Entity\ThuVien.cs" />
+    <Compile Include="HinhAnh.cs" />
     <Compile Include="Home.cs">
       <SubType>UserControl</SubType>
     </Compile>

@@ -12,15 +12,24 @@ using QL_TV.DAL;
 
 namespace QL_TV
 {
-     public partial class TatCa_DocGia : UserControl
-     {
-          QLTV ql = new QLTV();
-          List<HocVien> listHV = new List<HocVien>();
-          DS_DocGia dsHV;
-          CT_HocVien ctHV;
-          public TatCa_DocGia()
-          {
-               InitializeComponent();
-          }
-     }
+    public partial class TatCa_DocGia : UserControl
+    {
+        QLTV ql = new QLTV();
+        List<HocVien> listHV = new List<HocVien>();
+        DS_DocGia dsHV;
+        CT_HocVien ctHV;
+        public TatCa_DocGia()
+        {
+            InitializeComponent();
+            LoadDL();
+        }
+
+        void LoadDL()
+        {
+            listHV = ql.HocViens.ToList();
+            panelData.Controls.Clear();
+            dsHV = new DS_DocGia(listHV);
+            panelData.Controls.Add(dsHV);
+        }
+    }
 }
