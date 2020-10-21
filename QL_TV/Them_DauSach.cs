@@ -93,7 +93,7 @@ namespace QL_TV
             bool rs = dal.Insert(ds);
             if (rs == true)
             {
-                MessageBox.Show("Thêm thành công", "Thông báo");
+                MessageBox.Show("Thêm thành công", "Thông báo", MessageBoxButtons.OK);
             }
             else
             {
