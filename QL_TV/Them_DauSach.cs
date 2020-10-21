@@ -97,7 +97,7 @@ namespace QL_TV
             }
             else
             {
-                MessageBox.Show("Thêm không thành công", "Thông báo");
+                MessageBox.Show("Thêm không thành công", "Thông báo", MessageBoxButtons.OK);
             }
         }
         byte[] ArrByte_Anh;
