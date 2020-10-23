@@ -113,9 +113,7 @@ namespace QL_TV
                     filename = open.FileName.ToString();
                 }
             }));
-            thr.SetApartmentState(ApartmentState.STA);
-            thr.Start();
-            thr.Join();
+            
 
             if (filename == "")
             {
