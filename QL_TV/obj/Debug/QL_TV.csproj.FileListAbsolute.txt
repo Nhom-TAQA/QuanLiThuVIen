@@ -100,4 +100,3 @@ C:\Users\admin\Documents\GitHub\QuanLiThuVIen\QL_TV\obj\Debug\QL_TV.csproj.CoreC
 C:\Users\admin\Documents\GitHub\QuanLiThuVIen\QL_TV\obj\Debug\QL_TV.csproj.CopyComplete
 C:\Users\admin\Documents\GitHub\QuanLiThuVIen\QL_TV\obj\Debug\QL_TV.exe
 C:\Users\admin\Documents\GitHub\QuanLiThuVIen\QL_TV\obj\Debug\QL_TV.pdb
-C:\Users\Admin\Documents\GitHub\QuanLiThuVien\QL_TV\obj\Debug\QL_TV.csprojAssemblyReference.cache
