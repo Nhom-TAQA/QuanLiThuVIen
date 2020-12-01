@@ -107,24 +107,5 @@ namespace QL_TV
                 MessageBox.Show("Xóa không thành công", "Thông báo");
             }
         }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            ctDS = new CT_DauSach(ma);
-            DAL_DauSach dal = new DAL_DauSach();
-            DauSach ds1 = ql.DauSaches.FirstOrDefault(n => n.Ma_DauSach == ctDS.txbMaDauSach.Text);
-            bool rs = dal.Delete(ctDS.txbMaDauSach.Text);
-            if (rs == true)
-            {
-                MessageBox.Show("Xóa thành công", "Thông báo");
-                panelShowKQ.Controls.Clear();
-                listDS.Remove(ds1);
-                panelShowKQ.Controls.Add(new DS_DauSach(listDS));
-            }
-            else
-            {
-                MessageBox.Show("Xóa không thành công", "Thông báo");
-            }
-        }
     }
 }
