@@ -19,15 +19,7 @@ namespace QL_TV
                btnDauSach.ForeColor = System.Drawing.Color.White;
                panelData.Controls.Add(new TatCa_DauSach());
           }
-          private void SetButtonColor()
-          {
-               btnDauSach.BackColor = System.Drawing.Color.LightYellow;
-               btnDauSach.ForeColor = System.Drawing.Color.ForestGreen;
-               btnTimKiem.BackColor = System.Drawing.Color.LightYellow;
-               btnTimKiem.ForeColor = System.Drawing.Color.ForestGreen;
-               btnThemMoi.BackColor = System.Drawing.Color.LightYellow;
-               btnThemMoi.ForeColor = System.Drawing.Color.ForestGreen;
-          }
+        
           private void btnDauSach_Click(object sender, EventArgs e)
           {
                SetButtonColor();
