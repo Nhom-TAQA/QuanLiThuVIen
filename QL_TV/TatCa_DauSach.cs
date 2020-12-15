@@ -23,7 +23,18 @@ namespace QL_TV
             InitializeComponent();
             LayDL();
         }
-
+        void LayDL()
+        {
+            listDS = ql.DauSaches.ToList();
+            dsDS = new DS_DauSach(listDS);
+            dsDS.dtgvViewDL.CellClick += dtgvViewDL_CellClick;
+            panelData.Controls.Clear();
+            panelData.Controls.Add(dsDS);
+        }
+        private void btnQuayLai_Click(object sender, EventArgs e)
+        {
+            LayDL();
+        }
         private string ma;
         private void dtgvViewDL_CellClick(object sender, DataGridViewCellEventArgs e)
         {
